@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposed Solution: Freesia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #130B38;
+            overflow: hidden;
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            background: linear-gradient(135deg, #BFEDFF 0%, #F3B8FF 100%);
+            display: flex;
+            flex-direction: column;
+            padding: 60px;
+        }
+        .header {
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100px;
+            height: 4px;
+            background-color: #130B38;
+            opacity: 0.7;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            z-index: 1;
+        }
+        .intro {
+            font-size: 28px;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            max-width: 90%;
+            animation: slideUp 1s ease-in-out 0.3s both;
+        }
+        .intro strong {
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+            animation: fadeIn 1s ease-in-out 0.6s both;
+        }
+        .feature-card {
+            flex: 1 1 calc(33.333% - 20px);
+            min-width: 300px;
+            background-color: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(19, 11, 56, 0.1);
+        }
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #130B38;
+            opacity: 0.8;
+        }
+        .feature-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .feature-desc {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+        .goal-section {
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            animation: slideUp 1s ease-in-out 0.9s both;
+        }
+        .goal-icon {
+            font-size: 64px;
+            color: #130B38;
+            opacity: 0.8;
+        }
+        .goal-text {
+            font-size: 26px;
+            line-height: 1.5;
+        }
+        .goal-text strong {
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .decorative-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            filter: blur(40px);
+            z-index: 0;
+        }
+        .decorative-element-1 {
+            width: 400px;
+            height: 400px;
+            top: -150px;
+            right: -150px;
+            animation: float 8s ease-in-out infinite;
+        }
+        .decorative-element-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            left: -100px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(20px, 20px);
+            }
+        }
+        a{
+            background-color: black;
+            color: white;
+            font-size: 17px;
+            border-radius: 8px;
+            width: 100px;
+            height: 40px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 60px;
+            bottom: 40px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="decorative-element decorative-element-1"></div>
+        <div class="decorative-element decorative-element-2"></div>
+        
+        <div class="header">
+            <h1 class="title">Proposed Solution: Freesia</h1>
+        </div>
+        
+        <div class="content">
+            <p class="intro">
+                <strong>Freesia</strong> is an AI-powered web-based platform that delivers accessible emotional support using large language models, designed to overcome the barriers identified in current mental health services.
+            </p>
+            
+            <div class="features-container">
+                <div class="feature-card">
+                    <i class="material-icons feature-icon">chat</i>
+                    <h3 class="feature-title">Empathetic Conversations</h3>
+                    <p class="feature-desc">Simulates human-like dialogue with emotional intelligence</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="material-icons feature-icon">psychology</i>
+                    <h3 class="feature-title">Coping Strategies</h3>
+                    <p class="feature-desc">Provides evidence-based techniques for emotional management</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="material-icons feature-icon">sentiment_satisfied_alt</i>
+                    <h3 class="feature-title">Context-Aware Responses</h3>
+                    <p class="feature-desc">Tailors support based on user's emotional state and history</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="material-icons feature-icon">privacy_tip</i>
+                    <h3 class="feature-title">Anonymity & Privacy</h3>
+                    <p class="feature-desc">Ensures secure, confidential interactions without judgment</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="material-icons feature-icon">schedule</i>
+                    <h3 class="feature-title">24/7 Availability</h3>
+                    <p class="feature-desc">Instant support whenever users need it most</p>
+                </div>
+                
+                <div class="feature-card">
+                    <i class="material-icons feature-icon">escalator_warning</i>
+                    <h3 class="feature-title">Escalation Pathways</h3>
+                    <p class="feature-desc">Connects users with human counselors when necessary</p>
+                </div>
+            </div>
+            
+            <div class="goal-section">
+                <i class="material-icons goal-icon">lightbulb</i>
+                <p class="goal-text">
+                    Our goal is not to replace professional help, but to create an <strong>intermediate, safe space</strong> for users who need immediate support or are hesitant to engage in traditional therapy.
+                </p>
+            </div>
+        </div>
+        <a href="slide4.html">Next</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freesia: Web-based Pre-trained LLM for Emotional Support</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #130B38;
+            overflow: hidden;
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            background: linear-gradient(135deg, #BFEDFF 0%, #F3B8FF 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+        }
+        .content {
+            text-align: center;
+            max-width: 85%;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 64px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 60px;
+            opacity: 0.9;
+        }
+        .team-info {
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            animation: slideUp 1.2s ease-in-out 0.5s both;
+        }
+        .info-item {
+            font-size: 24px;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .info-item .material-icons {
+            font-size: 24px;
+            color: #130B38;
+            opacity: 0.8;
+        }
+        .school {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 40px;
+            opacity: 0.9;
+            animation: fadeIn 1.5s ease-in-out 1s both;
+        }
+        .decorative-element {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            filter: blur(40px);
+        }
+        .decorative-element-1 {
+            top: -100px;
+            left: -100px;
+            animation: float 8s ease-in-out infinite;
+        }
+        .decorative-element-2 {
+            bottom: -100px;
+            right: -100px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(20px, 20px);
+            }
+        }
+        a{
+            background-color: black;
+            color: white;
+            font-size: 17px;
+            border-radius: 8px;
+            width: 100px;
+            height: 40px;
+            cursor: pointer;
+            margin-top: 10vh;
+            text-align: center;
+            align-content: center;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="decorative-element decorative-element-1"></div>
+        <div class="decorative-element decorative-element-2"></div>
+        
+        <div class="content">
+            <h1 class="title">Freesia: web-based pre-trained LLM for emotional support</h1>
+            <h2 class="subtitle">Accessible emotional support through LLM and online methods</h2>
+            
+            <div class="team-info">
+                <div class="info-item">
+                    <i class="material-icons">person</i>
+                    <span>Leader: RATO, Ria Marion</span>
+                </div>
+                <div class="info-item">
+                    <i class="material-icons">group</i>
+                    <span>Members: BUENO, Nathaniel Kester | AMBIDA, Mark Lester</span>
+                </div>
+                <div class="info-item">
+                    <i class="material-icons">school</i>
+                    <span>Program: BACHELOR OF SCIENCE IN COMPUTER SCIENCE</span>
+                </div>
+            </div>
+            
+            <div class="school">ARELLANO UNIVERSITY SCHOOL OF COMPUTER STUDIES</div>
+        </div>
+        <a href="slide2.html">Next</a>
+    </div>
+</body>
+</html>

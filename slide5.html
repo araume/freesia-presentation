@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literature Survey</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #130B38;
+            overflow: hidden;
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            background: linear-gradient(135deg, #BFEDFF 0%, #F3B8FF 100%);
+            display: flex;
+            flex-direction: column;
+            padding: 60px;
+        }
+        .header {
+            margin-bottom: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100px;
+            height: 4px;
+            background-color: #130B38;
+            opacity: 0.7;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            z-index: 1;
+        }
+        .intro {
+            font-size: 24px;
+            line-height: 1.4;
+            margin-bottom: 25px;
+            max-width: 90%;
+            animation: slideUp 1s ease-in-out 0.3s both;
+        }
+        .intro strong {
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .table-container {
+            background-color: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px;
+            overflow: hidden;
+            animation: fadeIn 1s ease-in-out 0.6s both;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .research-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 18px;
+        }
+        .research-table th {
+            background-color: rgba(19, 11, 56, 0.1);
+            padding: 15px;
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+        .research-table td {
+            padding: 15px;
+            vertical-align: top;
+            line-height: 1.4;
+            border-bottom: 1px solid rgba(19, 11, 56, 0.1);
+        }
+        .research-table tr {
+            transition: background-color 0.3s ease;
+        }
+        .research-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .research-table tr:last-child td {
+            border-bottom: none;
+        }
+        .year {
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            color: #130B38;
+        }
+        .title-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+        }
+        .methodology {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .methodology-icon {
+            font-size: 20px;
+            color: #130B38;
+            opacity: 0.8;
+        }
+        .future-works {
+            color: #130B38;
+            font-weight: 500;
+        }
+        .table-scroll {
+            overflow-y: auto;
+            flex-grow: 1;
+        }
+        .table-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        .table-scroll::-webkit-scrollbar-track {
+            background: rgba(19, 11, 56, 0.1);
+            border-radius: 4px;
+        }
+        .table-scroll::-webkit-scrollbar-thumb {
+            background: rgba(19, 11, 56, 0.3);
+            border-radius: 4px;
+        }
+        .table-scroll::-webkit-scrollbar-thumb:hover {
+            background: rgba(19, 11, 56, 0.5);
+        }
+        .decorative-element {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            filter: blur(40px);
+            z-index: 0;
+        }
+        .decorative-element-1 {
+            width: 400px;
+            height: 400px;
+            top: -150px;
+            right: -150px;
+            animation: float 8s ease-in-out infinite;
+        }
+        .decorative-element-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            left: -100px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(20px, 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="decorative-element decorative-element-1"></div>
+        <div class="decorative-element decorative-element-2"></div>
+        
+        <div class="header">
+            <h1 class="title">Literature Survey</h1>
+        </div>
+        
+        <div class="content">
+            <p class="intro">
+                Our research is grounded in <strong>existing studies</strong> that demonstrate the potential and challenges of using AI for emotional support and mental health applications.
+            </p>
+            
+            <div class="table-container">
+                <div class="table-scroll">
+                    <table class="research-table">
+                        <thead>
+                            <tr>
+                                <th width="8%">Year</th>
+                                <th width="15%">Author/s</th>
+                                <th width="25%">Title</th>
+                                <th width="15%">Methodology</th>
+                                <th width="22%">Findings</th>
+                                <th width="15%">Future Works</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="year">2021</td>
+                                <td>Thompson, R. & Bell, A.</td>
+                                <td class="title-text">"Chatbots for Mental Health: A New Frontier"</td>
+                                <td class="methodology">
+                                    <i class="material-icons methodology-icon">analytics</i>
+                                    Case Study Analysis
+                                </td>
+                                <td>Users reported feeling heard and supported by conversational agents.</td>
+                                <td class="future-works">Develop more empathetic NLP models for nuanced support.</td>
+                            </tr>
+                            <tr>
+                                <td class="year">2022</td>
+                                <td>Wang, L.</td>
+                                <td class="title-text">"Online Mental Health Communities: A Safe Space?"</td>
+                                <td class="methodology">
+                                    <i class="material-icons methodology-icon">poll</i>
+                                    Survey & Content Analysis
+                                </td>
+                                <td>Participants valued anonymity and peer support in online forums.</td>
+                                <td class="future-works">Strengthen moderation policies and peer support training.</td>
+                            </tr>
+                            <tr>
+                                <td class="year">2022</td>
+                                <td>Evans, M.</td>
+                                <td class="title-text">"Using LLMs in Counseling Simulations"</td>
+                                <td class="methodology">
+                                    <i class="material-icons methodology-icon">science</i>
+                                    Experimental Design
+                                </td>
+                                <td>LLMs provided responses rated similarly to human counselors in empathy.</td>
+                                <td class="future-works">Explore real-world deployment under supervision.</td>
+                            </tr>
+                            <tr>
+                                <td class="year">2023</td>
+                                <td>Sharma, D. & Li, J.</td>
+                                <td class="title-text">"Emotional Intelligence in AI: How Much Is Enough?"</td>
+                                <td class="methodology">
+                                    <i class="material-icons methodology-icon">compare</i>
+                                    Comparative Evaluation
+                                </td>
+                                <td>Higher EI scores in LLMs correlated with better user satisfaction.</td>
+                                <td class="future-works">Develop benchmarks for emotional performance in LLMs.</td>
+                            </tr>
+                            <tr>
+                                <td class="year">2024</td>
+                                <td>Garcia, F.</td>
+                                <td class="title-text">"Hybrid Support Systems: Humans and AI Working Together"</td>
+                                <td class="methodology">
+                                    <i class="material-icons methodology-icon">groups</i>
+                                    Mixed Methods
+                                </td>
+                                <td>Combining human therapists with AI tools enhanced accessibility.</td>
+                                <td class="future-works">Scale hybrid systems in underserved communities.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
